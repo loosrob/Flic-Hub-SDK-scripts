@@ -14,7 +14,7 @@ buttonManager.on("buttonSingleOrDoubleClickOrHold", function(obj) {
 	// hold: AVR off
 	
 	var actionButtons = ["Flic2", "Other Button"];
-    var actionId = 0;
+	var actionId = 0;
 	var n = actionButtons.indexOf(buttonName);
 	if (n > -1) {
 		actionId = 1;
@@ -40,9 +40,9 @@ buttonManager.on("buttonSingleOrDoubleClickOrHold", function(obj) {
 			var vol = "-450"
 		}
 		var powerparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Power_Control><Power>" + avrpower + "</Power></Power_Control></Main_Zone></YAMAHA_AV>";
-        var inputparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Input><Input_Sel>" + input + "</Input_Sel></Input></Main_Zone></YAMAHA_AV>";
-        var progparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Surround><Program_Sel><Current><Sound_Program>" + prog + "</Sound_Program></Current></Program_Sel></Surround></Main_Zone></YAMAHA_AV>";
-        var volparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Volume><Lvl><Val>" + vol + "</Val><Exp>1</Exp><Unit>dB</Unit></Lvl></Volume></Main_Zone></YAMAHA_AV>";
+		var inputparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Input><Input_Sel>" + input + "</Input_Sel></Input></Main_Zone></YAMAHA_AV>";
+		var progparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Surround><Program_Sel><Current><Sound_Program>" + prog + "</Sound_Program></Current></Program_Sel></Surround></Main_Zone></YAMAHA_AV>";
+		var volparams = "<YAMAHA_AV cmd=\"PUT\"><Main_Zone><Volume><Lvl><Val>" + vol + "</Val><Exp>1</Exp><Unit>dB</Unit></Lvl></Volume></Main_Zone></YAMAHA_AV>";
 		// send AVR parameters
 		var url = "http://url/YamahaRemoteControl/ctrl"; // insert correct IP address
 		var headers = {"Content-type": "text/xml"};
