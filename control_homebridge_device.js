@@ -24,7 +24,7 @@ buttonManager.on("buttonSingleOrDoubleClickOrHold", function(obj) {
 	var deviceId = "verylongstring"; // you can get the device ID via the Homebride rest API examples at http://hb_url:8581/swagger/static/index.html
 	
 	// check if correct button was clicked
-	if (buttonName = actionButton) {
+	if (buttonName == actionButton) {
 			
 		// set device parameters based on click_type
 		if (clickType == "click") {
